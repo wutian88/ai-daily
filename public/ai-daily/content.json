@@ -1,0 +1,71 @@
+{
+  "updated": "2026-10-28",
+  "items": [
+    {
+      "id": "cloud-2026-10-28",
+      "kind": "日报",
+      "title": "AI来源简报｜2026-10-28",
+      "body": "# AI来源简报｜2026-10-28\n\n生成方式：GitHub Actions 云端结构化抓取；未调用模型，非Claude逐日撰写。正文摘要为自动截取，实践建议为维护者预设模板，不是对新版本效果的验证。\n\n检索日期：2026-10-28（北京时间）。选题按来源新鲜度和轮换规则，不是全网热度榜。\n\n## 1. langgenius/dify 项目动态\n\n### 来源陈述\n来源类型：GitHub；原始时间：2026-10-28T03:26:06Z。\n链接：https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63\n累计stars：159789（本次快照，不是今日增星）。\n关注问题：Agent工作流如何可靠落地？\n\n### 我的推断与实践建议\n原理：将任务拆为检索、工具调用和回答，分别设置输入输出契约。\n实践：以20条固定问题比较改动前后任务完成率、延迟和错误类型。\n\n### 结果与限制\n本地/云端模型实验：未实测。抓取成功不代表方法有效；作者效果须回到原文核对，不由此程序生成提升数字。\n\n---\n\n## 2. huggingface/trl 项目动态\n\n### 来源陈述\n来源类型：GitHub；原始时间：2026-10-27T17:47:24Z。\n链接：https://github.com/huggingface/trl/commit/c886cf23d74acd8dfed95b63943a8dba0f25d85f\n累计stars：19616（本次快照，不是今日增星）。\n关注问题：强化学习与后训练如何可靠落地？\n\n### 我的推断与实践建议\n原理：奖励或偏好信号改变训练目标；奖励质量影响是否学会投机。\n实践：先阅读版本差异；保持数据、模型和评测相同再比较，不自动训练。\n\n### 结果与限制\n本地/云端模型实验：未实测。抓取成功不代表方法有效；作者效果须回到原文核对，不由此程序生成提升数字。\n\n---\n\n## 3. Build specialized multimodal models with LFM3\n\n### 来源陈述\n来源类型：官方博客；原始时间：Tue, 27 Oct 2026 17:16:52 GMT。\n链接：https://huggingface.co/blog/LiquidAI/lfm3\n自动截取的来源摘要（可能截断）：\n来源无摘要，请阅读原文。\n\n### 我的推断与实践建议\n问题：这项方法解决的瓶颈是否也存在于你的任务？\n原理：请按原文核对模型、数据、目标与约束；此程序不推断论文机制。\n实践：列出原文基线与变量，先做一个最小对照；记录输入、成功标准、延迟和成本。\n\n### 结果与限制\n本地/云端模型实验：未实测。抓取成功不代表方法有效；作者效果须回到原文核对，不由此程序生成提升数字。\n\n---\n\n## 4. Counting the Bandages: On measuring the time that AI saves\n\n### 来源陈述\n来源类型：论文；原始时间：Wed, 28 Oct 2026 00:00:00 -0400。\n链接：https://arxiv.org/abs/2610.35942\n自动截取的来源摘要（可能截断）：\narXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time. I contrast a stopwatch view, on which time saved is whatever the clock records, with a ledger view, on which it is a counterfactual that has to be read next to the errors the work lets through, and I argue for the latter. The argument has four parts. I define a model-free pair of quantities, time saved and excess escaped defects, and one decision number built from them: the break-even defect \n\n### 我的推断与实践建议\n问题：这项方法解决的瓶颈是否也存在于你的任务？\n原理：请按原文核对模型、数据、目标与约束；此程序不推断论文机制。\n实践：列出原文基线与变量，先做一个最小对照；记录输入、成功标准、延迟和成本。\n\n### 结果与限制\n本地/云端模型实验：未实测。抓取成功不代表方法有效；作者效果须回到原文核对，不由此程序生成提升数字。\n\n---\n\n"
+    },
+    {
+      "id": "01_Agent与AI编程",
+      "kind": "专题",
+      "title": "Agent与AI编程",
+      "body": "# Agent与AI编程\n\n检索日期：2026-10-28。状态：资料研究；真实模型/系统实验未实测。\n\n## 问题\n为什么Agent演示能跑、真实任务却容易失控？\n\n## 原理\nAgent将观察、决策、工具动作及反馈组成循环；固定工作流把已知步骤明确编排。循环越自由，错误累积和成本越难界定。\n\n## 解决方案\n先用确定性工作流处理固定任务；只在需要动态选择工具时引入Agent。为每步设置结构化输入输出、超时、重试上限和任务验收。\n\n## 从原理到实践\n以订单问答为例：准备20个固定问题→实现只读查询工具→限定最多3步→保存工具参数、结果和最终答案→与单次直接回答比较。\n\n## 结果与验收\n完成率、错误工具调用率、每任务耗时中位数/p95、成本；预先确定成功标准。Dify/Langflow可作为应用编排入口，但本机未安装或跑通。\n\n## 证据与局限\n流行项目依据：Dify 159784 stars、Langflow 156085 stars，2026-10-28 GitHub API快照；这是累计关注度，不是今日增长。\n\n## 一手来源\n- [https://github.com/langgenius/dify](https://github.com/langgenius/dify)\n- [https://github.com/langflow-ai/langflow](https://github.com/langflow-ai/langflow)\n"
+    },
+    {
+      "id": "02_RAG与混合检索",
+      "kind": "专题",
+      "title": "RAG与混合检索",
+      "body": "# RAG与混合检索\n\n检索日期：2026-10-28。状态：资料研究；真实模型/系统实验未实测。\n\n## 问题\n为什么接了知识库仍然幻觉，或者根本检索不到正确资料？\n\n## 原理\nRAG先检索证据再生成答案。关键词检索擅长精确实体，向量检索补充语义匹配；重排在候选集合上再次排序。召回错误无法靠漂亮回答修复。\n\n## 解决方案\n分开评估检索与回答；先建带证据段落的测试集，再比较关键词、向量、混合检索，必要时重排。\n\n## 从原理到实践\n准备50份短文档和30个带标准证据的问题；固定切块规则；分别取top5；记录证据是否命中，再对同一生成模型提供证据。保留没有答案的问题。\n\n## 结果与验收\nRecall@5、引用正确率、无证据拒答率及延迟；目标示例Recall@5≥0.85仅为自定验收，不是本机实测。\n\n## 证据与局限\npgvector提供Postgres向量检索能力；检索与排序策略仍需应用设计。未进行真实模型问答实验。\n\n## 一手来源\n- [https://github.com/pgvector/pgvector](https://github.com/pgvector/pgvector)\n"
+    },
+    {
+      "id": "03_评测与回归",
+      "kind": "专题",
+      "title": "评测与回归",
+      "body": "# 评测与回归\n\n检索日期：2026-10-28。状态：资料研究；真实模型/系统实验未实测。\n\n## 问题\n改完提示词看着更好，怎么知道没有悄悄退步？\n\n## 原理\n评测把主观印象变成固定输入、可重复断言和明确评分。模型裁判也可能偏差，关键案例须人工或确定性校验。\n\n## 解决方案\n版本化测试集，区分开发集与留出集；同时看质量、成本和延迟，任何单一分数不足以验收。\n\n## 从原理到实践\n收集30个案例，分为正常/边界/拒答；先保存基线输出；仅改一个因素；逐例比较并列出回归。可采用promptfoo进行配置化测试，先核对其当前文档。\n\n## 结果与验收\nGoogle官方2026-06-30介绍准备数据、推理、评分、失败分析、优化闭环；这是方法资料，不是本项目实测提升。\n\n## 证据与局限\npromptfoo 26533 stars为当天累计快照。软件成功退出不等于业务正确；不以模型自评代替独立答案。\n\n## 一手来源\n- [https://github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)\n- [https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/](https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/)\n"
+    },
+    {
+      "id": "04_数据飞轮",
+      "kind": "专题",
+      "title": "数据飞轮",
+      "body": "# 数据飞轮\n\n检索日期：2026-10-28。状态：资料研究；真实模型/系统实验未实测。\n\n## 问题\n如何让用户反馈变成持续改进，而不是日志越积越多？\n\n## 原理\n请求轨迹→失败分类→清洗标注→固定评测→有针对性改动→复测上线→新反馈，形成闭环。数据必须能改变决策或模型行为才有优化价值。\n\n## 解决方案\n先建设评测闭环，再考虑微调；按工作负载拆任务，去重并隔离测试集，保留数据来源及版本。\n\n## 从原理到实践\n用AI SQL助手记录问题、允许的schema、生成SQL、执行结果、人工正确性和耗时；挑选失败类型，修改schema描述或检索；先在开发集调整，再在未见留出集验证。\n\n## 结果与验收\nNVIDIA提供Data Flywheel蓝图；不能把其他公司的成本节省直接视为自己收益。该仓库231 stars，最近push为2026-04-16，本期作为理论专题，不称近期爆火项目。\n\n## 证据与局限\n附标准库闭环小演示，只验证评测管线，不能证明真实模型效果。上线反馈可能含隐私及错误标签，不能原样训练。\n\n## 一手来源\n- [https://github.com/NVIDIA-AI-Blueprints/data-flywheel](https://github.com/NVIDIA-AI-Blueprints/data-flywheel)\n"
+    },
+    {
+      "id": "05_Agent记忆与上下文工程",
+      "kind": "专题",
+      "title": "Agent记忆与上下文工程",
+      "body": "# Agent记忆与上下文工程\n\n检索日期：2026-10-28。状态：资料研究；真实模型/系统实验未实测。\n\n## 问题\n历史越长越贵，摘要又会丢细节，怎么办？\n\n## 原理\n上下文工程决定当前请求能看到什么；长期记忆把事实及原始片段存到外部，按相关性和时间取回。记忆提取、更新、检索和遗忘分别可能出错。\n\n## 解决方案\n事实带来源、时间和用户隔离；同时保留可追溯片段。先比较全历史、摘要、检索记忆，再选择最小有效上下文。\n\n## 从原理到实践\n构造20组跨会话问题，加入同一事实的后续更新；分别跑三种上下文策略；观察是否用了过期事实、混入另一用户信息或遗漏条件。\n\n## 结果与验收\nRedis作者报告在500个LongMemEval问题上，混合原文与事实的方案任务平均准确率86.1%；依赖其模型与裁判配置，本机未复现。\n\n## 证据与局限\nmem0累计67974 stars。并非记得越多越好，检索错误可能比忘记更危险。\n\n## 一手来源\n- [https://github.com/mem0ai/mem0](https://github.com/mem0ai/mem0)\n- [https://redis.github.io/redis-ai-research-public/longmemeval-agent-memory/](https://redis.github.io/redis-ai-research-public/longmemeval-agent-memory/)\n"
+    },
+    {
+      "id": "06_MCP与工具协议",
+      "kind": "专题",
+      "title": "MCP与工具协议",
+      "body": "# MCP与工具协议\n\n检索日期：2026-10-28。状态：资料研究；真实模型/系统实验未实测。\n\n## 问题\n为什么AI连接数据库和工具时，每个系统都要重新对接？\n\n## 原理\nMCP为AI应用与外部数据、工具提供统一连接协议；协议负责接口对齐，应用仍负责授权、参数检查和业务语义。\n\n## 解决方案\n从一个只读、小范围工具开始；用结构化schema限制参数，工具结果当数据处理。\n\n## 从原理到实践\n设计只返回模拟库存的工具：输入商品ID，输出库存与更新时间；验证不存在ID、非法输入、超时。先在本地固定数据上调通，再考虑实际系统连接。\n\n## 结果与验收\n验收是输入契约正确、错误可区分、调用可追溯。本文未运行MCP server，不能宣称部署成功。\n\n## 证据与局限\nMCP是连接标准，不是模型能力提升或自动权限管理。\n\n## 一手来源\n- [https://modelcontextprotocol.io/docs/getting-started/intro](https://modelcontextprotocol.io/docs/getting-started/intro)\n"
+    },
+    {
+      "id": "07_蒸馏与强化学习",
+      "kind": "专题",
+      "title": "蒸馏与强化学习",
+      "body": "# 蒸馏与强化学习\n\n检索日期：2026-10-28。状态：资料研究；真实模型/系统实验未实测。\n\n## 问题\n为什么更小模型有时能更便宜地完成特定任务？\n\n## 原理\n蒸馏让学生模型学习教师输出；SFT用示范训练，偏好优化学习输出选择，RL基于奖励优化行为。奖励若不反映任务目标，会诱发钻规则。\n\n## 解决方案\n应用开发先试检索和提示优化；只有任务稳定、数据可靠、成本收益可算时再评估训练。\n\n## 从原理到实践\n从分类或结构化抽取开始，固定开发/测试集；比较大模型教师、小模型原版、小模型训练版，记录准确率和总成本。训练资源、许可证与数据授权须单独核对。\n\n## 结果与验收\nTRL是相关训练工具入口，19616 stars累计快照。此处未训练，所有效果待验证；训练费应纳入盈亏平衡，不能只比单次推理价格。\n\n## 证据与局限\n自生成答案不等于真值；留出集必须与训练样本隔离。\n\n## 一手来源\n- [https://github.com/huggingface/trl](https://github.com/huggingface/trl)\n"
+    },
+    {
+      "id": "08_自动生成环境与新兴数据飞轮",
+      "kind": "专题",
+      "title": "自动生成环境与新兴数据飞轮",
+      "body": "# 自动生成环境与新兴数据飞轮\n\n检索日期：2026-10-28。状态：资料研究；真实模型/系统实验未实测。\n\n## 问题\n训练Agent的任务和验证环境依赖人工作，如何扩大规模？\n\n## 原理\nAutoEnvScaling让提议者根据解题轨迹生成环境，再用求解者的新轨迹反馈下一轮；验证器决定环境是否可用。\n\n## 解决方案\n先用有确定性检查的小任务研究生成→验证→反馈，再考虑强化学习。\n\n## 从原理到实践\n设计CSV求和任务生成器，自动产生输入、隐藏答案和验收器；拒绝不可运行、答案歧义或泄漏答案的环境；比较有效任务比例及每有效任务成本。\n\n## 结果与验收\n2026-10-09预印本作者报告：有效环境率最高25倍、每有效环境成本最高降低75%；这些是论文特定设置结果，本机未复现，不是通用保证。\n\n## 证据与局限\n研究前沿候选，不能凭一篇预印本认定广泛流行；验证器被投机利用是关键风险。\n\n## 一手来源\n- [https://arxiv.org/abs/2610.14163](https://arxiv.org/abs/2610.14163)\n"
+    },
+    {
+      "id": "09_RAG与NL2SQL深度实践",
+      "kind": "专题",
+      "title": "RAG与NL2SQL：从答错到可定位的评测闭环",
+      "body": "# RAG与NL2SQL：从答错到可定位的评测闭环\n\n方案来自Claude首期建议；以下为Codex整理的实施设计，真实模型实验未运行。\n\n## 论点和原理\n答错必须分层定位：检索层有没有取到正确schema/业务口径；生成层SQL是否符合意图；执行层是否得到正确结果；表述层是否忠实于查询结果。SQL能执行只证明语法和对象可用，不证明业务正确。\n\n## 最小实践\n1. 在SQLite或已有测试库中准备orders(id, amount, created_at, status)，使用合成订单。\n2. 人工编写20条问题及标准SQL，覆盖退款排除、日期边界、空结果、金额聚合和模糊问题；不要把答案放进模型提示。\n3. 按问题类别拆成开发集与留出集，固定数据快照。开发集改schema描述，留出集只用于最后验收。\n4. 保存每题问题、检索片段、生成SQL、结果行、延迟和版本；执行前限制只读语句及超时。\n5. 先比较标准SQL与候选SQL的结果集合；金额/日期按明确精度比较。再单独检查自然语言答案是否忠实。\n6. 输出失败归因：schema未召回、口径遗漏、SQL错误、结果解释错误、应澄清却猜测。每次仅修一个主要因素。\n\n## 验收和结果表\n\n|指标|基线|改进版|状态|\n|---|---|---|---|\n|schema召回率|待测|待测|未运行|\n|SQL结果正确率|待测|待测|未运行|\n|答案忠实度|待测|待测|未运行|\n|完整耗时中位数/p95|待测|待测|未运行|\n\n20题只适合最小学习实验，不能代表生产稳定性。不同SQL可能给出同一结果但边界语义不同，应补反例数据，不仅比较一份数据上的结果。真实费用与依赖在选定模型和工具版本后记录。\n\n## 来源与延伸\n- https://github.com/pgvector/pgvector （向量检索组件，不能直接验证SQL语义）\n- https://github.com/promptfoo/promptfoo （回归评测工具）\n- https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/ （评测闭环方法）\n\n检索日期：2026-10-28。实践设计为本资料建议，不是上述项目公布的实验结果。\n"
+    },
+    {
+      "id": "2026-10-28",
+      "kind": "日报",
+      "title": "AI热点与理论实践日报｜2026-10-28",
+      "body": "# AI热点与理论实践日报｜2026-10-28\n首期扩展版：8个方向。检索来自GitHub连接器、GitHub API、官方博客/协议文档、作者研究页面与arXiv。Trending页面未返回仓库列表，无法核验今日上榜或增星排名；下列星数仅为累计关注度快照。\n\n## Agent与AI编程\n\n为什么Agent演示能跑、真实任务却容易失控？\n\n## 原理\nAgent将观察、决策、工具动作及反馈组成循环；固定工作流把已知步骤明确编排。循环越自由，错误累积和成本越难界定。\n\n## 解决方案\n先用确定性工作流处理固定任务；只在需要动态选择工具时引入Agent。为每步设置结构化输入输出、超时、重试上限和任务验收。\n\n## 从原理到实践\n以订单问答为例：准备20个固定问题→实现只读查询工具→限定最多3步→保存工具参数、结果和最终答案→与单次直接回答比较。\n\n## 结果与验收\n完成率、错误工具调用率、每任务耗时中位数/p95、成本；预先确定成功标准。Dify/Langflow可作为应用编排入口，但本机未安装或跑通。\n\n## 证据与局限\n流行项目依据：Dify 159784 stars、Langflow 156085 stars，2026-10-28 GitHub API快照；这是累计关注度，不是今日增长。\n\n## 一手来源\n- [https://github.com/langgenius/dify](https://github.com/langgenius/dify)\n- [https://github.com/langflow-ai/langflow](https://github.com/langflow-ai/langflow)\n\n\n## RAG与混合检索\n\n为什么接了知识库仍然幻觉，或者根本检索不到正确资料？\n\n## 原理\nRAG先检索证据再生成答案。关键词检索擅长精确实体，向量检索补充语义匹配；重排在候选集合上再次排序。召回错误无法靠漂亮回答修复。\n\n## 解决方案\n分开评估检索与回答；先建带证据段落的测试集，再比较关键词、向量、混合检索，必要时重排。\n\n## 从原理到实践\n准备50份短文档和30个带标准证据的问题；固定切块规则；分别取top5；记录证据是否命中，再对同一生成模型提供证据。保留没有答案的问题。\n\n## 结果与验收\nRecall@5、引用正确率、无证据拒答率及延迟；目标示例Recall@5≥0.85仅为自定验收，不是本机实测。\n\n## 证据与局限\npgvector提供Postgres向量检索能力；检索与排序策略仍需应用设计。未进行真实模型问答实验。\n\n## 一手来源\n- [https://github.com/pgvector/pgvector](https://github.com/pgvector/pgvector)\n\n\n## 评测与回归\n\n改完提示词看着更好，怎么知道没有悄悄退步？\n\n## 原理\n评测把主观印象变成固定输入、可重复断言和明确评分。模型裁判也可能偏差，关键案例须人工或确定性校验。\n\n## 解决方案\n版本化测试集，区分开发集与留出集；同时看质量、成本和延迟，任何单一分数不足以验收。\n\n## 从原理到实践\n收集30个案例，分为正常/边界/拒答；先保存基线输出；仅改一个因素；逐例比较并列出回归。可采用promptfoo进行配置化测试，先核对其当前文档。\n\n## 结果与验收\nGoogle官方2026-06-30介绍准备数据、推理、评分、失败分析、优化闭环；这是方法资料，不是本项目实测提升。\n\n## 证据与局限\npromptfoo 26533 stars为当天累计快照。软件成功退出不等于业务正确；不以模型自评代替独立答案。\n\n## 一手来源\n- [https://github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)\n- [https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/](https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/)\n\n\n## 数据飞轮\n\n如何让用户反馈变成持续改进，而不是日志越积越多？\n\n## 原理\n请求轨迹→失败分类→清洗标注→固定评测→有针对性改动→复测上线→新反馈，形成闭环。数据必须能改变决策或模型行为才有优化价值。\n\n## 解决方案\n先建设评测闭环，再考虑微调；按工作负载拆任务，去重并隔离测试集，保留数据来源及版本。\n\n## 从原理到实践\n用AI SQL助手记录问题、允许的schema、生成SQL、执行结果、人工正确性和耗时；挑选失败类型，修改schema描述或检索；先在开发集调整，再在未见留出集验证。\n\n## 结果与验收\nNVIDIA提供Data Flywheel蓝图；不能把其他公司的成本节省直接视为自己收益。该仓库231 stars，最近push为2026-04-16，本期作为理论专题，不称近期爆火项目。\n\n## 证据与局限\n附标准库闭环小演示，只验证评测管线，不能证明真实模型效果。上线反馈可能含隐私及错误标签，不能原样训练。\n\n## 一手来源\n- [https://github.com/NVIDIA-AI-Blueprints/data-flywheel](https://github.com/NVIDIA-AI-Blueprints/data-flywheel)\n\n\n## Agent记忆与上下文工程\n\n历史越长越贵，摘要又会丢细节，怎么办？\n\n## 原理\n上下文工程决定当前请求能看到什么；长期记忆把事实及原始片段存到外部，按相关性和时间取回。记忆提取、更新、检索和遗忘分别可能出错。\n\n## 解决方案\n事实带来源、时间和用户隔离；同时保留可追溯片段。先比较全历史、摘要、检索记忆，再选择最小有效上下文。\n\n## 从原理到实践\n构造20组跨会话问题，加入同一事实的后续更新；分别跑三种上下文策略；观察是否用了过期事实、混入另一用户信息或遗漏条件。\n\n## 结果与验收\nRedis作者报告在500个LongMemEval问题上，混合原文与事实的方案任务平均准确率86.1%；依赖其模型与裁判配置，本机未复现。\n\n## 证据与局限\nmem0累计67974 stars。并非记得越多越好，检索错误可能比忘记更危险。\n\n## 一手来源\n- [https://github.com/mem0ai/mem0](https://github.com/mem0ai/mem0)\n- [https://redis.github.io/redis-ai-research-public/longmemeval-agent-memory/](https://redis.github.io/redis-ai-research-public/longmemeval-agent-memory/)\n\n\n## MCP与工具协议\n\n为什么AI连接数据库和工具时，每个系统都要重新对接？\n\n## 原理\nMCP为AI应用与外部数据、工具提供统一连接协议；协议负责接口对齐，应用仍负责授权、参数检查和业务语义。\n\n## 解决方案\n从一个只读、小范围工具开始；用结构化schema限制参数，工具结果当数据处理。\n\n## 从原理到实践\n设计只返回模拟库存的工具：输入商品ID，输出库存与更新时间；验证不存在ID、非法输入、超时。先在本地固定数据上调通，再考虑实际系统连接。\n\n## 结果与验收\n验收是输入契约正确、错误可区分、调用可追溯。本文未运行MCP server，不能宣称部署成功。\n\n## 证据与局限\nMCP是连接标准，不是模型能力提升或自动权限管理。\n\n## 一手来源\n- [https://modelcontextprotocol.io/docs/getting-started/intro](https://modelcontextprotocol.io/docs/getting-started/intro)\n\n\n## 蒸馏与强化学习\n\n为什么更小模型有时能更便宜地完成特定任务？\n\n## 原理\n蒸馏让学生模型学习教师输出；SFT用示范训练，偏好优化学习输出选择，RL基于奖励优化行为。奖励若不反映任务目标，会诱发钻规则。\n\n## 解决方案\n应用开发先试检索和提示优化；只有任务稳定、数据可靠、成本收益可算时再评估训练。\n\n## 从原理到实践\n从分类或结构化抽取开始，固定开发/测试集；比较大模型教师、小模型原版、小模型训练版，记录准确率和总成本。训练资源、许可证与数据授权须单独核对。\n\n## 结果与验收\nTRL是相关训练工具入口，19616 stars累计快照。此处未训练，所有效果待验证；训练费应纳入盈亏平衡，不能只比单次推理价格。\n\n## 证据与局限\n自生成答案不等于真值；留出集必须与训练样本隔离。\n\n## 一手来源\n- [https://github.com/huggingface/trl](https://github.com/huggingface/trl)\n\n\n## 自动生成环境与新兴数据飞轮\n\n训练Agent的任务和验证环境依赖人工作，如何扩大规模？\n\n## 原理\nAutoEnvScaling让提议者根据解题轨迹生成环境，再用求解者的新轨迹反馈下一轮；验证器决定环境是否可用。\n\n## 解决方案\n先用有确定性检查的小任务研究生成→验证→反馈，再考虑强化学习。\n\n## 从原理到实践\n设计CSV求和任务生成器，自动产生输入、隐藏答案和验收器；拒绝不可运行、答案歧义或泄漏答案的环境；比较有效任务比例及每有效任务成本。\n\n## 结果与验收\n2026-10-09预印本作者报告：有效环境率最高25倍、每有效环境成本最高降低75%；这些是论文特定设置结果，本机未复现，不是通用保证。\n\n## 证据与局限\n研究前沿候选，不能凭一篇预印本认定广泛流行；验证器被投机利用是关键风险。\n\n## 一手来源\n- [https://arxiv.org/abs/2610.14163](https://arxiv.org/abs/2610.14163)\n\n"
+    }
+  ]
+}

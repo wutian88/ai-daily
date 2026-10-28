@@ -1,0 +1,73 @@
+name: AI daily collection and Pages
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: ai-daily-pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fixed-sample tests
+        run: python -m unittest discover -s scripts/tests -p 'test_*.py'
+      - name: Collect daily sources and snapshots
+        id: collect
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/cloud_daily.py
+      - name: Preserve previous page after collection failure
+        if: steps.collect.outcome == 'failure'
+        run: |
+          git restore --worktree -- public/ai-daily/content.json public/ai-daily/snapshots.json ai-daily/state.json
+          echo 'Collection failed. Deploying previous committed content; snapshots were not committed.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Save successful collection
+        if: steps.collect.outcome == 'success'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/ai-daily/content.json public/ai-daily/snapshots.json ai-daily/state.json ai-daily/archive
+          if ! git diff --cached --quiet; then git commit -m 'Update daily star snapshots and digest [skip ci]'; fi
+      - name: Rebase and test latest source
+        run: |
+          git pull --rebase origin main
+          python -m unittest discover -s scripts/tests -p 'test_*.py'
+      - name: Publish successful source commit
+        if: steps.collect.outcome == 'success'
+        run: git push origin HEAD:main
+      - name: Prepare standalone Pages artifact
+        run: |
+          python -c "import json; from pathlib import Path; json.loads(Path('public/ai-daily/content.json').read_text(encoding='utf-8')); json.loads(Path('public/ai-daily/snapshots.json').read_text(encoding='utf-8'))"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/ai-daily
+      - uses: actions/deploy-pages@v4
+        id: deploy
+      - name: Outcome
+        if: always()
+        env:
+          COLLECT: ${{ steps.collect.outcome }}
+          DEPLOY: ${{ steps.deploy.outcome }}
+        run: printf 'Collection=%s\nPages deployment=%s\n' "$COLLECT" "$DEPLOY" >> "$GITHUB_STEP_SUMMARY"
