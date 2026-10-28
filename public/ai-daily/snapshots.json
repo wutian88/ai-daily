@@ -1,1 +1,92 @@
-{}
+{
+  "langgenius/dify": {
+    "2026-10-28": 159793
+  },
+  "langflow-ai/langflow": {
+    "2026-10-28": 156088
+  },
+  "mem0ai/mem0": {
+    "2026-10-28": 67975
+  },
+  "promptfoo/promptfoo": {
+    "2026-10-28": 26538
+  },
+  "huggingface/trl": {
+    "2026-10-28": 19616
+  },
+  "pgvector/pgvector": {
+    "2026-10-28": 23509
+  },
+  "NVIDIA-AI-Blueprints/data-flywheel": {
+    "2026-10-28": 231
+  },
+  "Generated-Computers/Locals": {
+    "2026-10-28": 363
+  },
+  "cocacola-lab/Recursia": {
+    "2026-10-28": 110
+  },
+  "Fazmin/cve-intel": {
+    "2026-10-28": 109
+  },
+  "vahmoh/Veda": {
+    "2026-10-28": 96
+  },
+  "PDFMathTranslate/PDFMathReader": {
+    "2026-10-28": 63
+  },
+  "agentshield-dev/agentshield": {
+    "2026-10-28": 56
+  },
+  "Cinderubasp/InterviewCopilot-rpocket-team": {
+    "2026-10-28": 53
+  },
+  "Goekdeniz-Guelmez/JOSIE-Voice": {
+    "2026-10-28": 51
+  },
+  "faraflow/faraflow": {
+    "2026-10-28": 49
+  },
+  "VoltEmperorChaos/ai-agent-for-pc": {
+    "2026-10-28": 47
+  },
+  "PkLavc/Autotrader": {
+    "2026-10-28": 33
+  },
+  "OFat34764e/InterviewCopilot-rpocket-team": {
+    "2026-10-28": 32
+  },
+  "Sociaro-Research/open-media-gateway": {
+    "2026-10-28": 25
+  },
+  "dcarrero/genpic": {
+    "2026-10-28": 23
+  },
+  "zidniryi/cutvii": {
+    "2026-10-28": 22
+  },
+  "ABDULMUNAFZ/Hyperlocal-Intelligence-for-Flash-Flood-Prediction-Risk--Response": {
+    "2026-10-28": 20
+  },
+  "slyyr/awesome-robotics": {
+    "2026-10-28": 20
+  },
+  "skttr87/getsu": {
+    "2026-10-28": 19
+  },
+  "Mafifrizi/tanuki": {
+    "2026-10-28": 19
+  },
+  "Anil-matcha/awesome-gpt-6-astra": {
+    "2026-10-28": 12
+  },
+  "frekkoz3/Introduction-to-Artificial-Intelligence-2026-2027": {
+    "2026-10-28": 11
+  },
+  "federicolaterra/knemora": {
+    "2026-10-28": 11
+  },
+  "Ankit-ku-panda/SAP-ABAP-LocalAI": {
+    "2026-10-28": 10
+  }
+}
