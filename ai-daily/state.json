@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -9,6 +9,8 @@
     "https://github.com/langgenius/dify",
     "https://github.com/Generated-Computers/Locals",
     "https://huggingface.co/blog/allenai/novelty-bench",
-    "https://arxiv.org/abs/2610.35984"
+    "https://arxiv.org/abs/2610.35984",
+    "https://huggingface.co/blog/torch-neuronx-model-support",
+    "https://arxiv.org/abs/2610.36077"
   ]
 }
