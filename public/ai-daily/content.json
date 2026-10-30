@@ -1,6 +1,12 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "items": [
+    {
+      "id": "cloud-2026-10-30",
+      "kind": "日报",
+      "title": "AI来源简报｜2026-10-30",
+      "body": "# AI来源简报｜2026-10-30\n\n生成方式：GitHub Actions 云端结构化抓取；未调用模型，非Claude逐日撰写。正文摘要为自动截取，实践建议为维护者预设模板，不是对新版本效果的验证。\n\n检索日期：2026-10-30（北京时间）。选题按来源新鲜度和轮换规则，不是全网热度榜。\n\n## 1. langgenius/dify 星数观察\n\n### 来源陈述\n来源类型：GitHub；原始时间：2026-10-30 快照。\n链接：https://github.com/langgenius/dify\n累计stars：159964（本次快照，不是今日增星）。\n增速数据积累中（已有 3 天）\n关注问题：Agent工作流如何可靠落地？\n\n### 我的推断与实践建议\n原理：将任务拆为检索、工具调用和回答，分别设置输入输出契约。\n实践：以20条固定问题比较改动前后任务完成率、延迟和错误类型。\n\n### 结果与限制\n本地/云端模型实验：未实测。抓取成功不代表方法有效；作者效果须回到原文核对，不由此程序生成提升数字。\n\n---\n\n## 2. Generated-Computers/Locals｜新项目热度\n\n### 来源陈述\n来源类型：GitHub；原始时间：2026-10-12T17:40:28Z。\n链接：https://github.com/Generated-Computers/Locals\n累计stars：438（本次快照，不是今日增星）。\n新项目热度：近30天新建AI主题项目，按累计星数筛选，不代表增速。\n关注问题：新项目如何可靠落地？\n\n### 我的推断与实践建议\n原理：项目的机制与适用场景需阅读README和示例核实。\n实践：先检查许可证、依赖与示例，再用固定输入验证，不自动执行陌生代码。\n\n### 结果与限制\n本地/云端模型实验：未实测。抓取成功不代表方法有效；作者效果须回到原文核对，不由此程序生成提升数字。\n\n---\n\n## 3. Granite Switch 4.1.1 — Update models like you update software\n\n### 来源陈述\n来源类型：官方博客；原始时间：Thu, 29 Oct 2026 13:37:07 GMT。\n链接：https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1\n自动截取的来源摘要（可能截断）：\n来源无摘要，请阅读原文。\n\n### 我的推断与实践建议\n问题：这项方法解决的瓶颈是否也存在于你的任务？\n原理：请按原文核对模型、数据、目标与约束；此程序不推断论文机制。\n实践：列出原文基线与变量，先做一个最小对照；记录输入、成功标准、延迟和成本。\n\n### 结果与限制\n本地/云端模型实验：未实测。抓取成功不代表方法有效；作者效果须回到原文核对，不由此程序生成提升数字。\n\n---\n\n## 4. LRMoE: Demand-Side Load Re-Calibration for Efficient MoE Training on Memory-Constrained Nodes\n\n### 来源陈述\n来源类型：论文；原始时间：Fri, 30 Oct 2026 00:00:00 -0400。\n链接：https://arxiv.org/abs/2610.37720\n论文按订阅源发表/公告日期和主题筛选，不排热度；预印本，效果只属作者报告，未独立复现。\n自动截取的来源摘要（可能截断）：\narXiv:2610.37720v1 Announce Type: new Abstract: Sparse Mixture-of-Experts (MoE) models offer scalable capacity for Web applications, but uneven routing creates computation and communication bottlenecks. Existing placement and replication methods redistribute this workload, yet additional expert copies compete with token-related buffers for limited GPU memory. We present LRMoE, a memory-aware MoE training system that jointly recalibrates backward demand and balances the retained workload. During \n\n### 我的推断与实践建议\n问题：这项方法解决的瓶颈是否也存在于你的任务？\n原理：请按原文核对模型、数据、目标与约束；此程序不推断论文机制。\n实践：列出原文基线与变量，先做一个最小对照；记录输入、成功标准、延迟和成本。\n\n### 结果与限制\n本地/云端模型实验：未实测。抓取成功不代表方法有效；作者效果须回到原文核对，不由此程序生成提升数字。\n\n---\n\n"
+    },
     {
       "id": "cloud-2026-10-29",
       "kind": "日报",
