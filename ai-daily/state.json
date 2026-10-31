@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -13,6 +13,8 @@
     "https://huggingface.co/blog/torch-neuronx-model-support",
     "https://arxiv.org/abs/2610.36077",
     "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
-    "https://arxiv.org/abs/2610.37720"
+    "https://arxiv.org/abs/2610.37720",
+    "https://huggingface.co/blog/anydecisionmodel",
+    "https://arxiv.org/abs/2610.37731"
   ]
 }
