@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -19,6 +19,7 @@
     "https://github.com/microsoft/TokenEconomizer",
     "https://huggingface.co/blog/microsoft/thinkingbox-training",
     "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
-    "https://arxiv.org/abs/2610.40758"
+    "https://arxiv.org/abs/2610.40758",
+    "https://huggingface.co/blog/transformers-mic"
   ]
 }
