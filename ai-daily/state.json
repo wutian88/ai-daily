@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -26,6 +26,7 @@
     "https://huggingface.co/blog/ibm-research/palette-deck-building",
     "https://arxiv.org/abs/2611.05390",
     "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
-    "https://arxiv.org/abs/2611.06962"
+    "https://arxiv.org/abs/2611.06962",
+    "https://huggingface.co/blog/cwe-bench"
   ]
 }
