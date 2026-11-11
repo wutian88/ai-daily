@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -32,6 +32,8 @@
     "https://huggingface.co/blog/hf-torchneuron",
     "https://arxiv.org/abs/2611.08572",
     "https://huggingface.co/blog/reflection-beam",
-    "https://arxiv.org/abs/2611.08613"
+    "https://arxiv.org/abs/2611.08613",
+    "https://huggingface.co/blog/qvac/botpsy",
+    "https://arxiv.org/abs/2611.12933"
   ]
 }
