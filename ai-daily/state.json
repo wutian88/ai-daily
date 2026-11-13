@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -35,6 +35,9 @@
     "https://arxiv.org/abs/2611.08613",
     "https://huggingface.co/blog/qvac/botpsy",
     "https://arxiv.org/abs/2611.12933",
-    "https://huggingface.co/blog/token-pooling"
+    "https://huggingface.co/blog/token-pooling",
+    "https://github.com/didilili/mianstack",
+    "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+    "https://arxiv.org/abs/2611.14654"
   ]
 }
