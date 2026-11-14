@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -38,6 +38,7 @@
     "https://huggingface.co/blog/token-pooling",
     "https://github.com/didilili/mianstack",
     "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
-    "https://arxiv.org/abs/2611.14654"
+    "https://arxiv.org/abs/2611.14654",
+    "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
   ]
 }
