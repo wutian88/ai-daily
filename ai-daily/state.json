@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -42,6 +42,8 @@
     "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
     "https://huggingface.co/blog/3d-lora-finetuning",
     "https://huggingface.co/blog/decision",
-    "https://arxiv.org/abs/2611.17338"
+    "https://arxiv.org/abs/2611.17338",
+    "https://huggingface.co/blog/openrouter",
+    "https://arxiv.org/abs/2611.18642"
   ]
 }
