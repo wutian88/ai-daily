@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -45,6 +45,8 @@
     "https://arxiv.org/abs/2611.17338",
     "https://huggingface.co/blog/openrouter",
     "https://arxiv.org/abs/2611.18642",
-    "https://arxiv.org/abs/2611.21682"
+    "https://arxiv.org/abs/2611.21682",
+    "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
+    "https://arxiv.org/abs/2611.23322"
   ]
 }
