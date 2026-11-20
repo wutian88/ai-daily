@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -47,6 +47,8 @@
     "https://arxiv.org/abs/2611.18642",
     "https://arxiv.org/abs/2611.21682",
     "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
-    "https://arxiv.org/abs/2611.23322"
+    "https://arxiv.org/abs/2611.23322",
+    "https://huggingface.co/blog/rumble-2-flash",
+    "https://arxiv.org/abs/2611.25043"
   ]
 }
