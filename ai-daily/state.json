@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-23",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -50,6 +50,8 @@
     "https://arxiv.org/abs/2611.23322",
     "https://huggingface.co/blog/rumble-2-flash",
     "https://arxiv.org/abs/2611.25043",
-    "https://huggingface.co/blog/harness-adapters-at-scale"
+    "https://huggingface.co/blog/harness-adapters-at-scale",
+    "https://github.com/Juanlabs1989/descript-pro-win",
+    "https://arxiv.org/abs/2611.26663"
   ]
 }
