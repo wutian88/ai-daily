@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -52,6 +52,8 @@
     "https://arxiv.org/abs/2611.25043",
     "https://huggingface.co/blog/harness-adapters-at-scale",
     "https://github.com/Juanlabs1989/descript-pro-win",
-    "https://arxiv.org/abs/2611.26663"
+    "https://arxiv.org/abs/2611.26663",
+    "https://huggingface.co/blog/agentic-evals",
+    "https://arxiv.org/abs/2611.28185"
   ]
 }
