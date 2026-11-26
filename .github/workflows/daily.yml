@@ -11,21 +11,18 @@ concurrency:
   group: ai-daily-pages
   cancel-in-progress: false
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
       contents: write
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+    outputs:
+      collect_outcome: ${{ steps.collect.outcome }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - name: Fixed-sample tests
@@ -59,15 +56,28 @@ jobs:
       - name: Prepare standalone Pages artifact
         run: |
           python -c "import json; from pathlib import Path; json.loads(Path('public/ai-daily/content.json').read_text(encoding='utf-8')); json.loads(Path('public/ai-daily/snapshots.json').read_text(encoding='utf-8'))"
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
+          name: github-pages
           path: public/ai-daily
-      - uses: actions/deploy-pages@v4
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v5
         id: deploy
       - name: Outcome
         if: always()
         env:
-          COLLECT: ${{ steps.collect.outcome }}
+          COLLECT: ${{ needs.build.outputs.collect_outcome }}
           DEPLOY: ${{ steps.deploy.outcome }}
         run: printf 'Collection=%s\nPages deployment=%s\n' "$COLLECT" "$DEPLOY" >> "$GITHUB_STEP_SUMMARY"
