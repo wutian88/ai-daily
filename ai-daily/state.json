@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -55,6 +55,8 @@
     "https://arxiv.org/abs/2611.26663",
     "https://huggingface.co/blog/agentic-evals",
     "https://arxiv.org/abs/2611.28185",
-    "https://arxiv.org/abs/2611.31284"
+    "https://arxiv.org/abs/2611.31284",
+    "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+    "https://arxiv.org/abs/2611.33160"
   ]
 }
