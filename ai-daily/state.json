@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "schema": 2,
   "seen": [
     "https://github.com/langgenius/dify/commit/1f500e52cc30409959b08e19700b8521aaa80c63",
@@ -59,6 +59,8 @@
     "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
     "https://arxiv.org/abs/2611.33160",
     "https://huggingface.co/blog/training-swarms",
-    "https://arxiv.org/abs/2611.33161"
+    "https://arxiv.org/abs/2611.33161",
+    "https://github.com/Red2076-arch/waifu2x-image-upscaler-windows",
+    "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga"
   ]
 }
